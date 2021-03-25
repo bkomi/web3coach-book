@@ -1,11 +1,12 @@
 package node
 
 import (
-	"net/http"
-	"fmt"
-	"github.com/web3coach/the-blockchain-bar/database"
 	"encoding/json"
+	"fmt"
 	"io/ioutil"
+	"net/http"
+
+	"github.com/web3coach/the-blockchain-bar/database"
 )
 
 const httpPort = 8080
@@ -27,7 +28,7 @@ type TxAddReq struct {
 }
 
 type TxAddRes struct {
-	Hash     database.Hash `json:"block_hash"`
+	Hash database.Hash `json:"block_hash"`
 }
 
 func Run(dataDir string) error {

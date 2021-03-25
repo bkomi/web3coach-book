@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/spf13/cobra"
 	"fmt"
-	"github.com/web3coach/the-blockchain-bar/node"
 	"os"
+
+	"github.com/spf13/cobra"
+	"github.com/web3coach/the-blockchain-bar/node"
 )
 
 func runCmd() *cobra.Command {
@@ -17,6 +18,7 @@ func runCmd() *cobra.Command {
 			fmt.Println("Launching TBB node and its HTTP API...")
 
 			err := node.Run(dataDir)
+
 			if err != nil {
 				fmt.Println(err)
 				os.Exit(1)
